@@ -1,0 +1,42 @@
+{
+  "package": "BIT-TRACE P2P Anomaly Detection",
+  "version": "v1",
+  "files": [
+    {
+      "file": "requirements.txt",
+      "size_bytes": 41
+    },
+    {
+      "file": "model/isolation_forest.joblib",
+      "size_bytes": 3006157
+    },
+    {
+      "file": "model/scaler.joblib",
+      "size_bytes": 2215
+    },
+    {
+      "file": "model/feature_config.json",
+      "size_bytes": 1895
+    },
+    {
+      "file": "model/model_metadata.json",
+      "size_bytes": 1138
+    },
+    {
+      "file": "results/evaluation_report.json",
+      "size_bytes": 3008
+    },
+    {
+      "file": "results/reproducibility.json",
+      "size_bytes": 210
+    },
+    {
+      "file": "results/topk_evaluation.parquet",
+      "size_bytes": 4805
+    },
+    {
+      "file": "results/explainable_candidates.parquet",
+      "size_bytes": 556219
+    }
+  ]
+}

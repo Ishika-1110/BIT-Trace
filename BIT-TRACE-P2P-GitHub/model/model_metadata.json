@@ -1,0 +1,34 @@
+{
+  "model": "Isolation Forest",
+  "branch": "P2P",
+  "feature_set": "P2P-2",
+  "dataset": "Bitcoin P2P historical crawler observations",
+  "dataset_period": "2020-02-07 to 2020-07-09",
+  "training_split": {
+    "rule": "first_observed <= 2020-02-25",
+    "nodes": 14871
+  },
+  "holdout_split": {
+    "rule": "first_observed > 2020-02-25",
+    "nodes": 6251
+  },
+  "parameters": {
+    "n_estimators": 300,
+    "contamination": "auto",
+    "random_state": 42
+  },
+  "preprocessing": {
+    "log1p_feature_count": 15,
+    "scaler": "StandardScaler",
+    "fit_only_on_training_data": true
+  },
+  "results": {
+    "train_95_threshold": 0.08612042129870334,
+    "train_99_threshold": 0.1728713562842484,
+    "holdout_above_95_count": 269,
+    "holdout_above_95_rate": 0.04303311470164774,
+    "holdout_above_99_count": 46,
+    "holdout_above_99_rate": 0.007358822588385858
+  },
+  "evaluation_note": "The real P2P dataset has no verified anomaly labels. Therefore conventional classification accuracy is not reported. Evaluation uses temporal holdout scoring, threshold exceedance, score distributions, ranking stability, and period analysis."
+}

@@ -1,0 +1,9 @@
+{
+  "model": "BIT-TRACE P2P-2 Isolation Forest",
+  "holdout_nodes": 6251,
+  "exact_matches": 6251,
+  "max_absolute_difference": 0.0,
+  "mean_absolute_difference": 0.0,
+  "tolerance": 1e-10,
+  "status": "PASS"
+}

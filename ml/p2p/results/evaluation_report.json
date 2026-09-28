@@ -1,0 +1,112 @@
+{
+  "model": {
+    "name": "BIT-TRACE P2P-2 Isolation Forest",
+    "algorithm": "Isolation Forest",
+    "n_estimators": 300,
+    "random_state": 42,
+    "feature_count": 28
+  },
+  "dataset": {
+    "total_nodes": 21122,
+    "training_nodes": 14871,
+    "holdout_nodes": 6251,
+    "training_rule": "first_observed <= 2020-02-25",
+    "holdout_rule": "first_observed > 2020-02-25"
+  },
+  "threshold_testing": {
+    "train_95_threshold": 0.08612042129870334,
+    "train_99_threshold": 0.1728713562842484,
+    "holdout_above_95_count": 269,
+    "holdout_above_95_rate": 0.04303311470164774,
+    "holdout_above_99_count": 46,
+    "holdout_above_99_rate": 0.007358822588385858
+  },
+  "holdout_score_percentiles": {
+    "50": -0.051392156575385206,
+    "75": 0.006638524049392469,
+    "90": 0.011764052218402488,
+    "95": 0.07205144280960757,
+    "99": 0.1641461023140302,
+    "99.5": 0.17765254014764764,
+    "99.9": 0.20581255885055996
+  },
+  "top_k": [
+    {
+      "k": 100,
+      "jun_jul_count": 61,
+      "feb_mar_count": 39,
+      "jun_jul_pct": 61.0,
+      "feb_mar_pct": 39.0,
+      "mean_score": 0.17339040282503107,
+      "max_score": 0.21891960190693782
+    },
+    {
+      "k": 500,
+      "jun_jul_count": 330,
+      "feb_mar_count": 170,
+      "jun_jul_pct": 66.0,
+      "feb_mar_pct": 34.0,
+      "mean_score": 0.09923349787647287,
+      "max_score": 0.21891960190693782
+    },
+    {
+      "k": 1000,
+      "jun_jul_count": 810,
+      "feb_mar_count": 190,
+      "jun_jul_pct": 81.0,
+      "feb_mar_pct": 19.0,
+      "mean_score": 0.055465136894002405,
+      "max_score": 0.21891960190693782
+    }
+  ],
+  "period_analysis": [
+    {
+      "period": "Feb-Mar",
+      "count": 2029,
+      "mean": -0.05666700302133284,
+      "median": -0.0769416007730761,
+      "std": 0.059117917185819546,
+      "min": -0.11108720573607167,
+      "max": 0.2098006401036684
+    },
+    {
+      "period": "Jun-Jul",
+      "count": 4222,
+      "mean": -0.025918772400414722,
+      "median": -0.044170934020757335,
+      "std": 0.04979546049790648,
+      "min": -0.09927687266854329,
+      "max": 0.21891960190693782
+    }
+  ],
+  "reproducibility": {
+    "model": "BIT-TRACE P2P-2 Isolation Forest",
+    "holdout_nodes": 6251,
+    "exact_matches": 6251,
+    "max_absolute_difference": 0.0,
+    "mean_absolute_difference": 0.0,
+    "tolerance": 1e-10,
+    "status": "PASS"
+  },
+  "ground_truth": {
+    "available": false,
+    "note": "The historical Bitcoin P2P dataset does not provide verified anomaly labels."
+  },
+  "classification_metrics": {
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "roc_auc": null,
+    "pr_auc": null,
+    "reason": "Ground-truth anomaly labels are unavailable. Reporting these metrics would not be statistically valid."
+  },
+  "evaluation_method": [
+    "Temporal holdout testing",
+    "Train-derived anomaly thresholds",
+    "Holdout score distribution",
+    "Top-K candidate analysis",
+    "Period/regime analysis",
+    "Model reproducibility test"
+  ]
+}

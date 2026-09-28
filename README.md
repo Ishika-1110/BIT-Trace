@@ -718,7 +718,7 @@ The system is designed around the practical constraints of large transaction dat
 
 # 👥 Team
 
-## Nero Stack
+## TechNova014
 
 ### BIT-TRACE · Smart India Hackathon 2026
 
